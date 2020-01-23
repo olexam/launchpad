@@ -54,7 +54,7 @@ void setup() {
 
   pinMode(LAUNCH_BTN, INPUT_PULLUP);
   launchBtn.init(LAUNCH_BTN);
-  ButtonConfig* launchBtnConfig = launchBtn.getButtonConfig();
+  // ButtonConfig* launchBtnConfig = launchBtn.getButtonConfig();
   // launchBtnConfig->setEventHandler(launchEvntHandle);
 
   pinMode(IGNITOR_PIN, INPUT_PULLUP);
