@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "FastLED.h"
+#include <FastLED.h>
 #include <AceButton.h>
 using namespace ace_button;
 
@@ -16,7 +16,8 @@ using namespace ace_button;
 
 #define CONNECTIVITY_PIN 5
 
-#define IGNITOR_PIN LED_BUILTIN// 7
+// #define IGNITOR_PIN LED_BUILTIN// 7
+#define IGNITOR_PIN 7
 #define LAUNCH_BTN 6
 #define ARM_BTN 2
 
@@ -128,9 +129,9 @@ void proceedIgnition() {
     }
   }
   if (status == IGNITION) {
-      digitalWrite(IGNITOR_PIN, HIGH);
-  } else {
       digitalWrite(IGNITOR_PIN, LOW);
+  } else {
+      digitalWrite(IGNITOR_PIN, HIGH);
   }
 }
 
@@ -275,7 +276,7 @@ void printState(const char* pref) {
 
 void initIgnitor() {
   pinMode(IGNITOR_PIN, OUTPUT);
-  digitalWrite(IGNITOR_PIN, LOW);
+  digitalWrite(IGNITOR_PIN, HIGH);
 }
 
 void initButtons() {
