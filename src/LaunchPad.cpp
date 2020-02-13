@@ -3,7 +3,13 @@
 #include <AceButton.h>
 using namespace ace_button;
 
-#define LEDSTRIP_PIN 4
+#define ARM_BTN 2
+#define LAUNCH_BTN 3
+#define CONNECTIVITY_PIN 4
+// #define IGNITOR_PIN LED_BUILTIN// 7
+#define IGNITOR_PIN 6
+
+#define LEDSTRIP_PIN 5
 #define LED_TYPE WS2812
 #define COLOR_ORDER GRB
 #define NUM_LEDS 10
@@ -13,13 +19,6 @@ using namespace ace_button;
 #define LED_BLINK_TIME 100
 
 #define TRANSITION_TIMEOUT 1500
-
-#define CONNECTIVITY_PIN 5
-
-// #define IGNITOR_PIN LED_BUILTIN// 7
-#define IGNITOR_PIN 7
-#define LAUNCH_BTN 6
-#define ARM_BTN 2
 
 // #define IDLE_COL CRGB::White
 #define IDLE_COL CRGB::GhostWhite
